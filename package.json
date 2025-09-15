@@ -1,0 +1,20 @@
+{
+  "name": "dryne-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "^3.2.0",
+    "discord.js": "^14.21.0",
+    "fs": "^0.0.1-security",
+    "gif-encoder-2": "^1.0.5",
+    "mongoose": "^8.17.1",
+    "pretty-ms": "^9.2.0"
+  }
+}
