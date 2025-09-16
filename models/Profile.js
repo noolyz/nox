@@ -52,6 +52,9 @@ const profileSchema = new Schema({
         date: Date,
     }],
 
+    // NUEVO: Array para guardar los IDs de las insignias que posee el usuario.
+    badges: { type: [String], default: [] },
+
     lastSteal: { type: Date }, // Cooldown del atacante
     stealProtection: { type: Date }, // Cooldown de la víctima
     portfolio: {
@@ -59,8 +62,9 @@ const profileSchema = new Schema({
         of: Number, // Key: Ticker de la acción (ej: 'NOX'), Value: Cantidad de acciones
         default: new Map(),
     },
-    
 
 }, { timestamps: true });
+
+profileSchema.index({ userId: 1, guildId: 1 }, { unique: true });
 
 module.exports = model('Profile', profileSchema);
